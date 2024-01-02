@@ -1,23 +1,9 @@
-const listWithId = document.querySelector('#categories');
-const listWithIdItems = Array.from(listWithId.children);
-console.log(`Number of categories: ${listWithIdItems.length}`);
-const titleOfCategory = document.getElementsByTagName('h2');
-console.log(`Category: ${titleOfCategory[0].textContent}`);
-const listOfCategories = document.getElementsByTagName('ul');
-const arrOfCategories = Array.from(listOfCategories);
-const filteredArrayOfCategories = arrOfCategories.filter(item => item !== listWithId);
-const firstItemOfArray = Array.from(filteredArrayOfCategories[0].children);
-let amountOfItems = 0;
-firstItemOfArray.forEach((item) => { amountOfItems++ });
-console.log(`Elements: ${amountOfItems}`);
-console.log(`Category: ${titleOfCategory[1].textContent}`);
-const secondItemOfArray = Array.from(filteredArrayOfCategories[1].children);
-let amountOfItems_2 = 0;
-secondItemOfArray.forEach((item) => { amountOfItems_2++ });
-console.log(`Elements: ${amountOfItems_2}`);
-console.log(`Category: ${titleOfCategory[2].textContent}`);
-const thirdItemOfArray = Array.from(filteredArrayOfCategories[2].children);
-let amountOfItems_3 = 0;
-thirdItemOfArray.forEach((item) => { amountOfItems_3++ });
-console.log(`Elements: ${amountOfItems_3}`);
+const numberOfCategories = document.getElementById('categories').children.length;
+console.log(`Number of categories: ${numberOfCategories}`);
 
+const categories = document.querySelectorAll('h2');
+const arrayOfCategories = Array.from(categories);
+arrayOfCategories.forEach((item) => {
+  console.log('Category: ' +  item.textContent);
+  console.log('Elements: ' + item.nextElementSibling.children.length);
+});
