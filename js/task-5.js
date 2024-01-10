@@ -15,11 +15,3 @@ const changeColor = () => {
 
 changeColorBtn.addEventListener('click', changeColor);
 
-
-changeColorBtn.style.background = '#4E75FF';
-changeColorBtn.style.width = '148px';
-changeColorBtn.style.height = '40px';
-changeColorBtn.style.borderRadius = '8px';
-changeColorBtn.style.color = 'white';
-
-
