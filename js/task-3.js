@@ -3,9 +3,9 @@ const output = document.getElementById('name-output');
 
 const getInputValue = ({ currentTarget }) => {
     if (currentTarget.value.trim() !== '') {
-        return output.textContent = currentTarget.value.trim();
+        output.textContent = currentTarget.value.trim();
     } else {
-        return output.textContent = 'Anonymous';
+        output.textContent = 'Anonymous';
     }
 };
 

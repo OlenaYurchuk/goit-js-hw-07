@@ -31,7 +31,7 @@ const images = [
 const gallery = document.querySelector('.gallery');
 
 const arrOfImages = [];
-images.map((image) => {
+images.forEach((image) => {
   const galleryItem = document.createElement('li');
   const element = document.createElement('img');
   element.setAttribute('src', image.url);
