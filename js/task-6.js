@@ -4,36 +4,18 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-const controls = document.querySelector('controls');
+const controls = document.querySelector('#controls');
 const inputElements = document.querySelector('[type=number]');
 const createBtn = document.querySelector('button[data-create]');
 const destroyBtn = document.querySelector('button[data-destroy]');
 const boxesElements = document.getElementById('boxes');
-boxesElements.style.display = 'flex';
-boxesElements.style.flexWrap = 'wrap';
-inputElements.style.width = '150px';
-inputElements.style.height = '40px';
-inputElements.style.borderRadius = '8px';
-inputElements.style.border = 'none';
-inputElements.style.marginRight = '16px';
-createBtn.style.width = '120px';
-createBtn.style.height = '40px';
-createBtn.style.marginRight = '16px';
-createBtn.style.background = '#4E75FF';
-createBtn.style.color = 'white';
-createBtn.style.borderRadius = '8px';
-createBtn.style.marginBottom = '80px';
-destroyBtn.style.width = '120px';
-destroyBtn.style.height = '40px';
-destroyBtn.style.background = '#FF4E4E';
-destroyBtn.style.color = 'white';
-destroyBtn.style.borderRadius = '8px';
 
 createBtn.addEventListener('click', () => {
-  if (Number(inputElements.value) > Number(inputElements.max) || 
-      Number(inputElements.value) < Number(inputElements.min)) {
-    alert('Please enter number from 1 to 100');
+  if (parseInt(inputElements.value) > inputElements.max || 
+      parseInt(inputElements.value) < inputElements.min) {
+    alert('Please enter a number from 1 to 100');
   } else {
+    boxesElements.innerHTML = '';
     createBoxes(inputElements.value);
   }
   inputElements.value = '';
@@ -47,8 +29,7 @@ function destroyBoxes() {
 destroyBtn.addEventListener('click', destroyBoxes);
 
 function createBoxes(amount) {
-  console.log(amount)
-  let size = 20;
+  let size = 30;
   const boxesArray = [];
 
   for (let i = 0; i < amount; i++) {

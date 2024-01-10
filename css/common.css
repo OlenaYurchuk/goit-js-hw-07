@@ -110,3 +110,49 @@ h2 {
 .widget {
   text-align: center;
 }
+
+#boxes {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 32px;
+  background-color: #f6f6fe;
+}
+
+#controls {
+  margin-bottom: 16px;
+  padding: 32px;
+  background-color: #f6f6fe;
+}
+
+#controls input {
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  border: transparent;
+  margin-right: 16px;
+}
+
+#controls button {
+  width: 120px;
+  height: 40px;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+button[data-create] {
+  background-color: #4e75ff;
+}
+
+button[data-create]:hover {
+  background-color: #6c8cff;
+}
+
+button[data-destroy] {
+  background-color: #ff4e4e;
+}
+
+button[data-destroy]:hover {
+  background-color: #ff7070;
+}
